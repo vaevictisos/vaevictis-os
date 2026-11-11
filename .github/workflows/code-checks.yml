@@ -1,0 +1,40 @@
+# Static checks of the code (shellcheck, bandit, pyflakes) at every push, on
+# Debian 13 with the tools from the Debian archive. The rules and the list of
+# known, explained findings are in .github/code-checks.sh and
+# .github/code-checks-allow.txt. This workflow only reads the public code: it
+# uses no secrets and no actions written by other people.
+# A clean run means only that these tools found nothing new. It is not a
+# security audit.
+name: Code checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container: debian:trixie
+    timeout-minutes: 15
+    steps:
+      - name: Install the tools from Debian
+        run: |
+          set -eu
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+            ca-certificates git shellcheck bandit pyflakes3 > /dev/null
+      - name: Get the code of this commit
+        run: |
+          set -eu
+          git init -q code
+          cd code
+          git fetch -q --depth 1 "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" "$GITHUB_SHA"
+          git checkout -q FETCH_HEAD
+      - name: Run the checks
+        run: |
+          cd code
+          bash .github/code-checks.sh
