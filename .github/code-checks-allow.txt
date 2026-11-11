@@ -1,0 +1,24 @@
+# Findings of .github/code-checks.sh that were checked by hand and are not
+# bugs, or are small tidy-ups left for version 2.0. One "file:CODE" per line,
+# then the reason. A new finding of the same kind in the same file is NOT
+# reported, so keep this list short and remove lines when the code is fixed.
+# Checked on 2026-11-11 (shellcheck 0.10, bandit 1.7.10).
+
+# shellcheck
+build/vv-branding:SC1087          # "$n[[:space:]]" is a sed pattern, not an array
+build/vv-chroot:SC2010            # ls | grep on kernel file names in /boot, tidy up in 2.0
+build/vv-chroot:SC2034            # unused variables hdr, CORE, OPT, tidy up in 2.0
+build/vv-iso:SC2054               # QEMU options are written with commas on purpose
+build/vv-liveuser:SC2034          # unused variable SRC_HOME, tidy up in 2.0
+build/vv-usb:SC2046               # adds ",notrunc" or nothing, never spaces
+tests/sandbox_probe_run.sh:SC2148 # test helper without #!, tidy up in 2.0
+tests/ssh_firewall_netns.sh:SC1083 # { 2299 } is nft syntax, passed on purpose
+tests/ssh_firewall_netns.sh:SC2034 # unused loop variable, tidy up in 2.0
+
+# bandit
+build/aurora:B108                 # /tmp only if there is no runtime folder; runs as the user, not root
+build/vv-vpn-helper:B103          # /var/lib/vv-vpn holds only the list of node names, meant to be readable
+tests/apps_logic.py:B102          # test: runs functions taken from our own programs
+tests/apps_logic.py:B307          # test: evaluates constants from our own programs
+tests/sandbox_probe.py:B108       # test: checks what the sandbox does with /tmp
+tests/vpn_dns_route_netns.py:B602 # test: fixed commands in a throw-away network namespace
