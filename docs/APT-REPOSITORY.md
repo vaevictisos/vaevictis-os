@@ -23,7 +23,7 @@ the signed `SHA256SUMS` of that release.
 
 1. No more publications. The last signed index is not renewed: it expires on **2026-11-16** and apt then reports the repository as
    expired (Debian's updates are not affected).
-2. The last fixes for 1.1 are published as files of the [1.2 release](https://github.com/linuxtuts-website/vaevictis-os/releases/tag/v1.2),
+2. The last fixes for 1.1 are published as files of the [1.2 release](https://github.com/vaevictisos/vaevictis-os/releases/tag/v1.2),
    with the last `vaevictis-archive-keyring` (2026.10.18): it removes the source entry, the pin and the key from the system
    (`dpkg-maintscript-helper rm_conffile`; a copy changed locally is kept as `.dpkg-bak`, which apt ignores). How to install them:
    [UPDATING.md](UPDATING.md).

@@ -10,7 +10,7 @@ VaeVictis's own tools, when one is needed, is published as a file in a release.
 
 ## Installed from 1.1 or 1.2: what 1.3 brings, as three packages
 
-The [1.3 release](https://github.com/linuxtuts-website/vaevictis-os/releases/tag/v1.3) has them. Download them with
+The [1.3 release](https://github.com/vaevictisos/vaevictis-os/releases/tag/v1.3) has them. Download them with
 `SHA256SUMS`, `SHA256SUMS.asc` and `vaevictis-release-key.asc` into one folder, then in that folder:
 
 ```bash
@@ -47,7 +47,7 @@ What the packages cannot change: the boot options and the partitions chosen when
 ## Installed from 1.1: the last fixes, and removing the repository
 
 1.1 trusts the closed repository. Its last fixes are three packages in the
-[1.2 release](https://github.com/linuxtuts-website/vaevictis-os/releases/tag/v1.2). Download them with `SHA256SUMS`,
+[1.2 release](https://github.com/vaevictisos/vaevictis-os/releases/tag/v1.2). Download them with `SHA256SUMS`,
 `SHA256SUMS.asc` and `vaevictis-release-key.asc` into one folder, then in that folder:
 
 ```bash
