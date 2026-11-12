@@ -1,7 +1,7 @@
 # The VaeVictis APT repository: closed
 
-From October 2026 VaeVictis had a signed APT repository, <https://apt.linuxtuts.online/> (files:
-[`vaevictis-apt`](https://github.com/linuxtuts-website/vaevictis-apt)), trusted by default by the 1.1 image through the package
+From October 2026 VaeVictis had a signed APT repository, <https://apt.linuxtuts.online/> (files: the
+`vaevictis-apt` repository), trusted by default by the 1.1 image through the package
 `vaevictis-archive-keyring`. **It was closed with release 1.2.**
 
 ## Why
@@ -29,7 +29,7 @@ the signed `SHA256SUMS` of that release.
    [UPDATING.md](UPDATING.md).
 3. After 1.2 is out, the DNS record `apt.linuxtuts.online` is deleted **first**, and only then GitHub Pages is switched off for
    `vaevictis-apt` (in the other order somebody else could serve files under that name). The `vaevictis-apt` repository is
-   archived, not deleted, so its history stays readable.
+   archived, not deleted. Since 2026-11-12 it is private, so its history is no longer public.
 
 A system installed from 1.1 that never installs the last packages keeps trusting the key for that name only; once the name is
 gone there is nothing left to download from it, and `sudo apt purge vaevictis-archive-keyring` removes it (not `remove`: it
