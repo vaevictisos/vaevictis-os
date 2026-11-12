@@ -165,7 +165,7 @@ Fixes found in an audit of the VaeVictis code. Systems installed from 1.0 need t
 
 ## APT repository (2026-10-10)
 
-A signed APT repository at <https://apt.linuxtuts.online/> (files: [`vaevictis-apt`](https://github.com/linuxtuts-website/vaevictis-apt)),
+A signed APT repository at <https://apt.linuxtuts.online/> (files: the `vaevictis-apt` repository, private since 2026-11-12),
 so that `apt upgrade` can update the VaeVictis programs. It is not enabled by default: you add it yourself.
 - Holds `vaevictis-aurora` 1.1.0, byte for byte the file of the `aurora-v1.1.0` release (same SHA-256).
 - Index files signed with an ed25519 key, fingerprint `0A41 158C 1DD6 718D 3D3F  FED0 6848 6B39 B2A9 9993`. The private key stays on

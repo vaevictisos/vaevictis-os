@@ -40,8 +40,7 @@ gpg --verify SHA256SUMS.asc SHA256SUMS           # must say: Good signature from
 ```
 
 The release key (it also signed the APT repository, now closed): `0A41 158C 1DD6 718D 3D3F  FED0 6848 6B39 B2A9 9993`. Compare
-the fingerprint with the one on <https://vaevictisos.org> and in the [vaevictis-apt](https://github.com/linuxtuts-website/vaevictis-apt)
-README, three places that would all have to be changed by an attacker. (Releases before 1.1 have only the `.sha256` file.)
+the fingerprint with the one on <https://vaevictisos.org>: two places that would both have to be changed by an attacker. (Releases before 1.1 have only the `.sha256` file.)
 
 Put it on a USB stick (4 GB or more, it will be erased). On Linux the repository has a guarded tool, `build/vv-usb`, that
 refuses system disks and shows you what it is about to erase; `dd` and balenaEtcher work too.
