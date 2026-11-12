@@ -49,7 +49,7 @@ After 1.2, Debian keeps the system updated; VaeVictis's own tools get fixes when
   responsibility a one-person hobby project cannot carry: a lost or stolen signing key, or a forgotten monthly re-signature,
   would affect every user. 1.2 has no repository configured; updates come from Debian only. Why and how:
   [docs/APT-REPOSITORY.md](docs/APT-REPOSITORY.md).
-- **Systems installed from 1.1:** the last fixes are files in the [1.2 release](https://github.com/linuxtuts-website/vaevictis-os/releases/tag/v1.2) (`vaevictis-tools` 1.3.0,
+- **Systems installed from 1.1:** the last fixes are files in the [1.2 release](https://github.com/vaevictisos/vaevictis-os/releases/tag/v1.2) (`vaevictis-tools` 1.3.0,
   `vaevictis-aurora` 1.1.3, and `vaevictis-archive-keyring` 2026.10.18, which removes the repository): one command, see
   [docs/UPDATING.md](docs/UPDATING.md).
 - **VaeVictis PDF removed:** Debian's own PDF viewer is there, maintained with Debian's security updates. Less code of our

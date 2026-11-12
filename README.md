@@ -6,7 +6,7 @@ Live USB, graphical desktop (GNOME), disk-encrypting installer. Free, open, and 
 **Status: 1.3, the current version.** Debian keeps the system updated; our own tools get fixes when needed, best effort (see below). Download page: <https://vaevictisos.org/>
 
 **Installed 1.1 or 1.2?** What 1.3 brings comes as three packages in the
-[1.3 release](https://github.com/linuxtuts-website/vaevictis-os/releases/tag/v1.3): one command, in [docs/UPDATING.md](docs/UPDATING.md)
+[1.3 release](https://github.com/vaevictisos/vaevictis-os/releases/tag/v1.3): one command, in [docs/UPDATING.md](docs/UPDATING.md)
 (which also tells 1.1 systems how to remove the closed APT repository).
 
 > **Before you download: what VaeVictis is, and what it is not**
