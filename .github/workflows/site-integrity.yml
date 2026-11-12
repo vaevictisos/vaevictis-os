@@ -20,9 +20,9 @@ jobs:
     timeout-minutes: 10
     env:
       SITE: https://vaevictisos.org
-      REPO: linuxtuts-website/vaevictis-os
+      REPO: vaevictisos/vaevictis-os
       KEY_FPR: 0A41158C1DD6718D3D3FFED068486B39B2A99993
-      UA: "Mozilla/5.0 (compatible; vaevictis-site-check/1.0; +https://github.com/linuxtuts-website/vaevictis-os)"
+      UA: "Mozilla/5.0 (compatible; vaevictis-site-check/1.0; +https://github.com/vaevictisos/vaevictis-os)"
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Get the signed checksums of the latest release
